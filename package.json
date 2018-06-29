@@ -4,12 +4,13 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "server.js": "server.js",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "postinstall": "ng build --aot -prod"
   },
   "private": true,
   "dependencies": {
@@ -27,6 +28,7 @@
     "core-js": "^2.4.1",
     "express": "^4.16.3",
     "ng2-toastr": "^4.1.2",
+    "path": "^0.12.7",
     "pusher": "^2.0.0",
     "pusher-js": "^4.2.2",
     "rxjs": "^5.5.6",
@@ -40,6 +42,7 @@
     "@types/jasminewd2": "~2.0.2",
     "@types/node": "~6.0.60",
     "codelyzer": "^4.0.1",
+    "enhanced-resolve": "^3.3.0",
     "jasmine-core": "~2.8.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~2.0.0",
@@ -51,5 +54,9 @@
     "ts-node": "~4.1.0",
     "tslint": "~5.9.1",
     "typescript": "~2.5.3"
+  },
+  "engines": {
+    "node": "8.11.3",
+    "npm": "5.6.0"
   }
 }
