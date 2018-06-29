@@ -1,7 +1,7 @@
 import { Component, ViewContainerRef } from '@angular/core';
-import { BoardService } from './board.service';
-import { Board } from './board';
+import { BoardService } from './board.service'
 import { ToastsManager } from 'ng2-toastr';
+import { Board } from './board';
 
 declare const Pusher: any;
 const NUM_PLAYERS = 2;
@@ -20,6 +20,7 @@ export class AppComponent {
   player: number = 0;
   players: number = 0;
   gameId: string;
+  gameUrl: string = location.protocol + '//' + location.hostname + (location.port ? ':' + location.port: '');
 
   constructor(
     private toastr: ToastsManager,
@@ -41,10 +42,15 @@ export class AppComponent {
     }
     this.gameId = id;
     // init pusher
-    const pusher = new Pusher('APP_KEY', {
+    const pusher = new Pusher('9f8fdcd6a2def904a788', {
       authEndpoint: '/pusher/auth',
-      cluster: 'eu'
+      cluster: 'us2'
     });
+    //   const pusher = new Pusher('9f8fdcd6a2def904a788', {
+    //   authEndpoint: '/pusher/auth',
+    //   cluster: 'us2',
+    //   encrypted: true
+    // });
     // bind to relevant channels
     this.pusherChannel = pusher.subscribe(id);
     this.pusherChannel.bind('pusher:member_added', member => { this.players++ })

@@ -1,15 +1,16 @@
-import { TestBed, inject } from '@angular/core/testing';
+/* tslint:disable:no-unused-variable */
 
-import { BoardService } from './board.service';
+import { TestBed, async, inject } from '@angular/core/testing';
+import { BattleshipBoardService } from './battleship-board.service';
 
-describe('BoardService', () => {
+describe('BattleshipBoardService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [BoardService]
+      providers: [BattleshipBoardService]
     });
   });
 
-  it('should be created', inject([BoardService], (service: BoardService) => {
+  it('should ...', inject([BattleshipBoardService], (service: BattleshipBoardService) => {
     expect(service).toBeTruthy();
   }));
 });

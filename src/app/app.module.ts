@@ -1,11 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-
-import {ToastModule} from 'ng2-toastr/ng2-toastr';
-
+import { ToastModule } from 'ng2-toastr';
 
 @NgModule({
   declarations: [
@@ -13,6 +12,8 @@ import {ToastModule} from 'ng2-toastr/ng2-toastr';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    HttpModule,
     ToastModule.forRoot()
   ],
   providers: [],

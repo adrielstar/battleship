@@ -1,10 +1,9 @@
-import { Player } from "./player";
-
+import { Player } from './player'
 export class Board {
-    player : Player;
-    tiles: Object[];
+  player: Player;
+  tiles: Object[];
 
-    constructor(value: object = {}){
-        Object.assign(this, value);
-    }
+  constructor(values: Object = {}) {
+    Object.assign(this, values);
+  }
 }

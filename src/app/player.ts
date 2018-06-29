@@ -1,8 +1,8 @@
 export class Player {
-    id: number;
-    score: number = 0;
+  id: number;
+  score: number = 0;
 
-    constructor(value: Object = {}){
-        Object.assign(this, value);
-    }
+  constructor(values: Object = {}) {
+    Object.assign(this, values);
+  }
 }
